@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Statistique</title>
+        <link rel="stylesheet" href="/css/style.css"/>
+        
+    </head>
+
+    <body>
+        
+        <div id="selection">
+            <label for="mois">Mois :</label>
+            <select id="mois" name="mois">
+                <option value="1">janvier</option>
+                <option value="2">février</option>
+                <option value="3">mars</option>
+                <option value="4">avril</option>
+                <option value="5">mai</option>
+                <option value="6">juin</option>
+                <option value="7">juillet</option>
+                <option value="8">août</option>
+                <option value="9">septembre</option>
+                <option value="10">octobre</option>
+                <option value="11">novembre</option>
+                <option value="12">décembre</option>
+            </select>
+            
+            <label for="date">Date :</label>
+            <input type="date" id="date"/>
+        </div>
+        <section id="principale">
+
+            
+            
+
+            <section id="statJour">
+                
+                <div id="graphJour1">
+                    <canvas id="chartJour1" title="Graphe jours 1"></canvas>
+                </div>
+
+                <div id="graphJour2">
+                    <canvas id="chartJour2" title="Graphe jours 2"></canvas>
+                </div>
+                <div id="graphJour3">
+                    <canvas id="chartJour3" title="Graphe jours 3"></canvas>
+                </div>
+                
+                <div id="graphJour4">
+                    <canvas id="chartJour4" title="Graphe jours 4"></canvas>
+                </div>
+            </section>
+
+            <section id="statMois">
+
+                <div id="graph1">
+                    <canvas id="myChart1" title="Graphe 1"></canvas>
+                </div>
+                <div id="graph2">
+                    <canvas id="myChart2" title="Graphe 2"></canvas>
+                </div>
+                <div id="graph3">
+                    <canvas id="myChart3" title="Graphe 3"></canvas>
+                </div>
+                <div id="graphMois4">
+                    <canvas id="chartMois4" title="Graphe mois 4"></canvas>
+                </div>
+               
+            </section>
+
+        </section>
+       
+
+        
+        <script src="/js/chart.js"></script>
+        <script src="js/chartjs-plugin-datalabels.js"></script>
+        <script src="/js/principale.js"></script>
+    </body>
+</html>
