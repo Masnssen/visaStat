@@ -1,0 +1,29 @@
+body{
+    width: 100;
+}
+
+h1{
+    text-align: center;
+    width: 100%;
+    background-color:red;
+}
+h2{
+    text-decoration: underline;
+}
+#NewData{
+    width: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+
+    background-color: blue;
+}
+
+#UpdateData{
+    width: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+
+    background-color: red;
+}
