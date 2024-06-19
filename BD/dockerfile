@@ -1,0 +1,17 @@
+# Utiliser l'image officielle MySQL comme base
+FROM mysql:8.0
+
+# Définir les variables d'environnement pour la configuration de MySQL
+ENV MYSQL_ROOT_PASSWORD=massi
+ENV MYSQL_DATABASE=fastmail
+ENV MYSQL_USER=massi
+ENV MYSQL_PASSWORD=massi
+
+# Copier le fichier de dump SQL dans le répertoire d'initialisation de MySQL
+COPY ./database.sql /docker-entrypoint-initdb.d/
+
+# Exposer le port MySQL (3306 par défaut)
+EXPOSE 3306
+
+# Le point d'entrée utilise le script d'initiation par défaut de MySQL
+# Aucun changement nécessaire car l'image officielle gère le démarrage de MySQL

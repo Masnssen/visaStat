@@ -18,7 +18,7 @@ app.use(cors());
 
 ///Initialiser les donnees de connection a la base de donnee 
 mysqldata = {
-	host: "localhost",
+	host: "db",
 	user : "massi",
 	password : "massi",
 	database : "fastmail"

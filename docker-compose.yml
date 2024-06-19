@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: massi
+      MYSQL_DATABASE: fastmail
+      MYSQL_USER: massi
+      MYSQL_PASSWORD: massi
+    volumes:
+      - ./BD/database.sql:/docker-entrypoint-initdb.d/database.sql
+    ports:
+      - "3306:3306"
+
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: nodeJs-container
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    environment:
+      DATABASE_HOST: db
+      DATABASE_USER: massi
+      DATABASE_PASSWORD: massi
+      DATABASE_NAME: fastmail
+    
